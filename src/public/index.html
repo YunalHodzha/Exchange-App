@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,22 +10,27 @@
             margin-bottom: 20px;
         }
 
-        label, input, button {
+        label,
+        input,
+        button {
             margin: 5px;
         }
     </style>
 </head>
+
 <body>
     <h1>Currency Exchange Tracker</h1>
 
     <div class="currency-section" id="try-section">
-        <h2>EUR</h2>
-        <label for="eur-amount">Amount:</label>
-        <input type="number" id="eur-amount">
-        <label for="eur-rate">Rate:</label>
-        <input type="number" id="eur-rate" step="0.01">
-        <button onclick="buyCurrency('EUR')">Buy</button>
-        <button onclick="sellCurrency('EUR')">Sell</button>
+        <form method="POST" action="http://localhost:3000/action">
+            <h2>EUR</h2>
+            <label for="eur-amount">Amount:</label>
+            <input type="number" id="eur-amount" name="eur-amount">
+            <label for="eur-rate">Rate:</label>
+            <input type="number" id="eur-rate" name="eur-rate" step="0.01">
+            <input type="submit" id="buy" value="Buy" name="buy"></input>
+            <input type="submit" id="sell" value="Sell" name="sell"></input>
+        </form>
     </div>
 
 
@@ -58,22 +64,8 @@
         <button onclick="sellCurrency('GBP')">Sell</button>
     </div>
 
-    <!-- Repeat sections for TRY and EUR -->
 
-    <script>
-        function buyCurrency(currency) {
-            var amount = document.getElementById(currency.toLowerCase() + '-amount').value;
-            var rate = document.getElementById(currency.toLowerCase() + '-rate').value;
-            console.log("Buying", amount, currency, "at rate", rate);
-            // Add AJAX call or Fetch API call to send data to your server
-        }
 
-        function sellCurrency(currency) {
-            var amount = document.getElementById(currency.toLowerCase() + '-amount').value;
-            var rate = document.getElementById(currency.toLowerCase() + '-rate').value;
-            console.log("Selling", amount, currency, "at rate", rate);
-            // Add AJAX call or Fetch API call to send data to your server
-        }
-    </script>
 </body>
+
 </html>
