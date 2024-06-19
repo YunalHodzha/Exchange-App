@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exchange Bureau</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="currency-container">
+            <div class="currency-list">
+                <div class="currency-row" id="currency-BGN">
+                    <span class="currency-name">BGN</span>
+                    <span class="holdings" id="holdings-BGN">0.00</span>
+                </div>
+                <div class="currency-row" id="currency-EUR">
+                    <span class="currency-name">EUR</span>
+                    <button class="buy-btn" data-currency="EUR">Buy</button>
+                    <button class="sell-btn" data-currency="EUR">Sell</button>
+                    <span class="holdings" id="holdings-EUR">0.00</span>
+                </div>
+                <div class="currency-row" id="currency-USD">
+                    <span class="currency-name">USD</span>
+                    <button class="buy-btn" data-currency="USD">Buy</button>
+                    <button class="sell-btn" data-currency="USD">Sell</button>
+                    <span class="holdings" id="holdings-USD">0.00</span>
+                </div>
+                <div class="currency-row" id="currency-GBP">
+                    <span class="currency-name">GBP</span>
+                    <button class="buy-btn" data-currency="GBP">Buy</button>
+                    <button class="sell-btn" data-currency="GBP">Sell</button>
+                    <span class="holdings" id="holdings-GBP">0.00</span>
+                </div>
+                <div class="currency-row" id="currency-TRY">
+                    <span class="currency-name">TRY</span>
+                    <button class="buy-btn" data-currency="TRY">Buy</button>
+                    <button class="sell-btn" data-currency="TRY">Sell</button>
+                    <span class="holdings" id="holdings-TRY">0.00</span>
+                </div>
+            </div>
+        </div>
+        <div class="trades-container">
+            <div class="trades">
+                <h2>Trades</h2>
+                <ul id="trades-list"></ul>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="reports">
+        <h2>Reports</h2>
+        <button id="daily-report-btn">Daily Report</button>
+        <pre id="report-output"></pre>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Operation</h2>
+            <div class="form-group">
+                <label for="modal-currency">Currency:</label>
+                <input type="text" id="modal-currency" readonly>
+            </div>
+            <div class="form-group">
+                <label for="modal-operation">Operation:</label>
+                <input type="text" id="modal-operation" readonly>
+            </div>
+            <div class="form-group">
+                <label for="modal-amount">Amount:</label>
+                <input type="number" id="modal-amount" step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="modal-price">Price:</label>
+                <input type="number" id="modal-price" step="0.01">
+            </div>
+            <div class="form-group">
+                <label for="modal-bgn-sum">BGN Sum:</label>
+                <input type="number" id="modal-bgn-sum" readonly>
+            </div>
+            <button id="modal-submit-btn">Submit</button>
+        </div>
+    </div>
+
+    <script src="script.js" type="module"></script> <!-- Ensure type="module" -->
+</body>
+</html>
