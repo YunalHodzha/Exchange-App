@@ -8,81 +8,82 @@
 </head>
 <body>
     <div class="container">
-        <div class="currency-container">
-            <div class="currency-list">
-                <div class="currency-row" id="currency-BGN">
-                    <span class="currency-name">BGN</span>
-                    <span class="holdings" id="holdings-BGN">0.00</span>
+        <div class="currency-trades-container">
+            <div class="currency-container">
+                <div class="currency-list">
+                    <div class="currency-row" id="currency-BGN">
+                        <span class="currency-name">ЛЕВА</span>
+                        <span class="holdings" id="holdings-BGN">0.00</span>
+                    </div>
+                    <div class="currency-row" id="currency-EUR">
+                        <span class="currency-name">ЕВРО</span>
+                        <button class="buy-btn" data-currency="EUR">КУПУВА</button>
+                        <button class="sell-btn" data-currency="EUR">ПРОДАВА</button>
+                        <span class="holdings" id="holdings-EUR">0.00</span>
+                    </div>
+                    <div class="currency-row" id="currency-USD">
+                        <span class="currency-name">Американски Долар</span>
+                        <button class="buy-btn" data-currency="USD">КУПУВА</button>
+                        <button class="sell-btn" data-currency="USD">ПРОДАВА</button>
+                        <span class="holdings" id="holdings-USD">0.00</span>
+                    </div>
+                    <div class="currency-row" id="currency-GBP">
+                        <span class="currency-name">Британски Паунд</span>
+                        <button class="buy-btn" data-currency="GBP">КУПУВА</button>
+                        <button class="sell-btn" data-currency="GBP">ПРОДАВА</button>
+                        <span class="holdings" id="holdings-GBP">0.00</span>
+                    </div>
+                    <div class="currency-row" id="currency-TRY">
+                        <span class="currency-name">Турска Лира</span>
+                        <button class="buy-btn" data-currency="TRY">КУПУВА</button>
+                        <button class="sell-btn" data-currency="TRY">ПРОДАВА</button>
+                        <span class="holdings" id="holdings-TRY">0.00</span>
+                    </div>
                 </div>
-                <div class="currency-row" id="currency-EUR">
-                    <span class="currency-name">EUR</span>
-                    <button class="buy-btn" data-currency="EUR">Buy</button>
-                    <button class="sell-btn" data-currency="EUR">Sell</button>
-                    <span class="holdings" id="holdings-EUR">0.00</span>
-                </div>
-                <div class="currency-row" id="currency-USD">
-                    <span class="currency-name">USD</span>
-                    <button class="buy-btn" data-currency="USD">Buy</button>
-                    <button class="sell-btn" data-currency="USD">Sell</button>
-                    <span class="holdings" id="holdings-USD">0.00</span>
-                </div>
-                <div class="currency-row" id="currency-GBP">
-                    <span class="currency-name">GBP</span>
-                    <button class="buy-btn" data-currency="GBP">Buy</button>
-                    <button class="sell-btn" data-currency="GBP">Sell</button>
-                    <span class="holdings" id="holdings-GBP">0.00</span>
-                </div>
-                <div class="currency-row" id="currency-TRY">
-                    <span class="currency-name">TRY</span>
-                    <button class="buy-btn" data-currency="TRY">Buy</button>
-                    <button class="sell-btn" data-currency="TRY">Sell</button>
-                    <span class="holdings" id="holdings-TRY">0.00</span>
+            </div>
+            <div class="trades-container">
+                <div class="trades">
+                    <h2>Trades</h2>
+                    <ul id="trades-list"></ul>
                 </div>
             </div>
         </div>
-        <div class="trades-container">
-            <div class="trades">
-                <h2>Trades</h2>
-                <ul id="trades-list"></ul>
-            </div>
+        <div class="reports">
+            <h2>Reports</h2>
+            <button id="daily-report-btn">Daily Report</button>
+            <input type="date" id="start-date">
+            <input type="date" id="end-date">
+            <button id="custom-report-btn">Generate Custom Report</button>
+            <pre id="report-output"></pre>
         </div>
-        
-    </div>
-
-    <div class="reports">
-        <h2>Reports</h2>
-        <button id="daily-report-btn">Daily Report</button>
-        <pre id="report-output"></pre>
     </div>
 
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
-            <h2>Operation</h2>
             <div class="form-group">
-                <label for="modal-currency">Currency:</label>
-                <input type="text" id="modal-currency" readonly>
+                <label for="modal-currency">Валута:</label>
+                <input type="text" id="modal-currency" readonly data-value="">
             </div>
             <div class="form-group">
-                <label for="modal-operation">Operation:</label>
-                <input type="text" id="modal-operation" readonly>
+                <label for="modal-operation">Операция:</label>
+                <input type="text" id="modal-operation" readonly data-value="">
             </div>
-            <div class="form-group">
-                <label for="modal-amount">Amount:</label>
+            <div class="form-group" id="amount-grid">
+                <label for="modal-amount">Количество:</label>
                 <input type="number" id="modal-amount" step="0.01">
             </div>
-            <div class="form-group">
-                <label for="modal-price">Price:</label>
+            <div class="form-group" id="price-grid">
+                <label for="modal-price">Курс:</label>
                 <input type="number" id="modal-price" step="0.01">
             </div>
-            <div class="form-group">
-                <label for="modal-bgn-sum">BGN Sum:</label>
+            <div class="form-group" id="bgn-sum-grid">
+                <label for="modal-bgn-sum">Сума Лева:</label>
                 <input type="number" id="modal-bgn-sum" readonly>
             </div>
-            <button id="modal-submit-btn">Submit</button>
+            <button id="modal-submit-btn">Потвърди</button>
         </div>
     </div>
-
-    <script src="script.js" type="module"></script> <!-- Ensure type="module" -->
+    <script src="script.js" type="module"></script>
 </body>
 </html>

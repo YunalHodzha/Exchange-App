@@ -1,5 +1,10 @@
 export const fetchData = (url, options = {}) => {
-    return fetch(url, options).then(response => response.json());
+    return fetch(url, options).then(response => {
+        if (!response.ok) {
+            return response.json().then(err => { throw new Error(err.error); });
+        }
+        return response.json();
+    });
 };
 
 export const loadData = () => fetchData('/api/load-data');
@@ -15,3 +20,11 @@ export const handleOperation = (operationData) => fetchData('/api/handle-operati
 });
 
 export const getDailyReport = () => fetchData('/api/daily-report');
+
+export const getCustomReport = (startDate, endDate) => fetchData('/api/custom-report', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ startDate, endDate })
+});

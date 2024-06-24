@@ -1,177 +1,272 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 50px;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 50px;
 }
 
 .container {
-   
-    width: 100%;
-    max-width: 90%;
-    margin: 50px auto;
-    display: flex;
-    
-    justify-content: space-between;
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+  width: 100%;
+  max-width: 90%;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.currency-trades-container {
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .currency-container {
-    width: 70%;
-   
+  padding: 8px;
+  width: 60%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 .currency-list {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .currency-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #f9f9f9;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  align-items: center;
+  height: 60px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
 }
 
 .currency-name {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 button {
-    padding: 5px 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  height: 50px;
+  width: 100px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 button.buy-btn {
-    background-color: #4CAF50;
-    color: white;
+  background-color: #4caf50;
+  color: white;
+}
+
+button.buy-btn:hover {
+  background-color: darkgreen;
+  border: 1.5px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 button.sell-btn {
-    background-color: #f44336;
-    color: white;
+  background-color: #f44336;
+  color: white;
+}
+
+button.sell-btn:hover {
+  background-color: darkred;
+  border: 1.5px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.holdings {
+  display: flex;
+  font-weight: bold;
+  justify-content: end;
 }
 
 .form-group {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 label {
-    display: block;
-    margin-bottom: 5px;
+  display: block;
+  margin-bottom: 5px;
 }
 
 input {
-    width: 100%;
-    padding: 8px;
-    box-sizing: border-box;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
 .trades-container {
-    width: 25%;
+  width: 25%;
+  max-height: 400px; /* Adjust the height as needed */
+  overflow-y: auto;
 }
 
 .trades {
-    background-color: #f9f9f9;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    max-height: 400px; /* Set maximum height for the trades section */
-    overflow-y: auto; /* Enable vertical scrolling */
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  max-height: 100%; /* Ensure the trades section uses the full height */
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 .trades h2 {
-    text-align: center;
+  text-align: center;
 }
 
 #trades-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 100%; /* Ensure the trades list uses the full height */
+  overflow-y: auto; /* Enable vertical scrolling for the list */
 }
 
 #trades-list li {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
 }
 
 #trades-list li.highlight {
-    background-color: #d4edda; /* Light green background for highlighting */
-    border-color: #c3e6cb; /* Matching border color for highlighting */
+  background-color: #d4edda; /* Light green background for highlighting */
+  border-color: #c3e6cb; /* Matching border color for highlighting */
 }
 
 .trade-type {
-    color: #007bff;
-    font-weight: bold;
+  color: #007bff;
+  font-weight: bold;
 }
 
-.trade-amount, .trade-currency, .trade-price {
-    color: #000;
-    font-weight: bold;
+.trade-amount,
+.trade-currency,
+.trade-price {
+  color: #000;
+  font-weight: bold;
 }
 
 pre {
-    background: #f8f8f8;
-    padding: 10px;
-    border: 1px solid #ddd;
-    white-space: pre-wrap;
+  background: #f8f8f8;
+  padding: 10px;
+  border: 1px solid #ddd;
+  white-space: pre-wrap;
 }
 
 .reports {
-    margin: 50px auto;
-    width: 400px;
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-
+  margin: 50px auto;
+  width: 400px;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 }
 
 /* Modal Styles */
 .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
-    padding-top: 60px;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 5% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 400px;
-    border-radius: 8px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 100%;
+  width: 95%;
+  height: 100px;
+  border-radius: 8px;
+}
+
+#modal-currency {
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+#amount-grid {
+  width: 200px;
+}
+
+#modal-amount {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+#price-grid {
+  width: 100px;
+}
+
+#modal-price {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+#bgn-sum-grid {
+  padding: 10px;
+  border-radius: 4px;
+  width: 20%;
+  height: 80%;
+  background-color: lightgreen;
+}
+
+#modal-bgn-sum {
+  border: none;
+  background-color: lightgreen;
+  font-size: 35px;
+  font-weight: bolder;
 }
 
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  margin-right: 20px;
+  margin-left: -55px;
+  margin-top: -20px;
+  font-size: 50px;
+  font-weight: bold;
+  width: 50px;
+  height: 50px;
 }
 
 .close:hover,
 .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+  border: 1px solid gray;
+  border-radius: 5px;
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: lightgrey;
+}
+
+#modal-submit-btn {
+  margin: auto 20px;
+  background: #4caf50;
+}
+
+#modal-submit-btn:hover {
+  border: 1px solid black;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: darkgreen;
 }

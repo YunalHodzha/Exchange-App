@@ -40,5 +40,138 @@
     "amount": 2000,
     "price": 1.96,
     "date": "2024-06-19T16:11:54.436Z"
+  },
+  {
+    "type": "buy",
+    "currency": "EUR",
+    "amount": 200,
+    "price": 1.94,
+    "date": "2024-06-20T06:41:05.071Z"
+  },
+  {
+    "type": "buy",
+    "currency": "USD",
+    "amount": 300,
+    "price": 1.78,
+    "date": "2024-06-20T08:06:08.627Z"
+  },
+  {
+    "type": "buy",
+    "currency": "TRY",
+    "amount": 1000,
+    "price": 0.054,
+    "date": "2024-06-20T08:07:18.697Z"
+  },
+  {
+    "type": "buy",
+    "currency": "EUR",
+    "amount": 1000,
+    "price": 1.94,
+    "date": "2024-06-23T08:53:24.745Z"
+  },
+  {
+    "type": "buy",
+    "currency": "EUR",
+    "amount": 200,
+    "price": 1.94,
+    "date": "2024-06-23T09:19:46.766Z"
+  },
+  {
+    "type": "sell",
+    "currency": "EUR",
+    "amount": 300,
+    "price": 1.96,
+    "date": "2024-06-23T09:20:19.565Z"
+  },
+  {
+    "type": "buy",
+    "currency": "EUR",
+    "amount": 100,
+    "price": 1.94,
+    "date": "2024-06-23T09:30:27.000Z"
+  },
+  {
+    "type": "sell",
+    "currency": "USD",
+    "amount": 100,
+    "price": 1.82,
+    "date": "2024-06-23T09:30:42.842Z"
+  },
+  {
+    "type": "buy",
+    "currency": "EUR",
+    "amount": 100,
+    "price": 1.94,
+    "date": "2024-06-23T09:40:34.057Z"
+  },
+  {
+    "type": "buy",
+    "currency": "USD",
+    "amount": 100,
+    "price": 1.78,
+    "date": "2024-06-23T09:45:45.690Z"
+  },
+  {
+    "type": "buy",
+    "currency": "USD",
+    "amount": 100,
+    "price": 1.78,
+    "date": "2024-06-23T09:47:51.169Z"
+  },
+  {
+    "type": "sell",
+    "currency": "TRY",
+    "amount": 50,
+    "price": 0.063,
+    "date": "2024-06-23T09:47:58.617Z"
+  },
+  {
+    "type": "buy",
+    "currency": "EUR",
+    "amount": 500,
+    "price": 1.94,
+    "date": "2024-06-23T09:48:11.509Z"
+  },
+  {
+    "type": "buy",
+    "currency": "GBP",
+    "amount": 800,
+    "price": 2.28,
+    "date": "2024-06-23T09:52:15.861Z"
+  },
+  {
+    "type": "buy",
+    "currency": "USD",
+    "amount": 100,
+    "price": 1.79,
+    "date": "2024-06-23T09:54:58.351Z"
+  },
+  {
+    "type": "buy",
+    "currency": "GBP",
+    "amount": 100,
+    "price": 2.29,
+    "date": "2024-06-23T09:55:13.858Z"
+  },
+  {
+    "type": "buy",
+    "currency": "EUR",
+    "amount": 500,
+    "price": 1.95,
+    "date": "2024-06-23T09:55:22.327Z"
+  },
+  {
+    "type": "buy",
+    "currency": "EUR",
+    "amount": 50,
+    "price": 1.95,
+    "date": "2024-06-23T09:56:44.707Z"
+  },
+  {
+    "type": "buy",
+    "currency": "EUR",
+    "amount": 200,
+    "price": 1.94,
+    "date": "2024-06-23T11:27:26.901Z"
   }
 ]
