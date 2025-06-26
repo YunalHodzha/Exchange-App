@@ -1,6 +1,8 @@
 import { loadData, getPrice, handleOperation, getDailyReport, getCustomReport } from './api.js';
 import { updateHoldings, renderTrades, showReport } from './ui.js';
 
+//TO Do LISt//
+
 const currencyNames = {
     EUR: "ЕВРО",
     USD: "Американски Долар",
